@@ -61,8 +61,21 @@
        </div>
        <div id="project">
             <h1 class="title">Analizar <i class="fa-solid fa-wave-square"></i></h1>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias enim necessitatibus quos nisi ipsum explicabo facere vero repudiandae similique rem atque, inventore, nobis temporibus reiciendis expedita nesciunt nulla nostrum sed.</p>
-                
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias enim necessitatibus quos nisi ipsum explicabo facere vero repudiandae similique rem atque, inventore, nobis temporibus reiciendis expedita nesciunt nulla nostrum sed.</p>
+        
+        <div class="formulario">
+            <label for="año">Año</label><br>
+            <input type="text" id="año" placeholder="Año"><br>  
+            
+            <label for="trabajo">Trabajo / Empresa</label><br>
+            <input type="text" id="trabajo" placeholder="Trabajo"><br> 
+
+            <label for="salario">Salario</label><br>
+            <input type="text" id="salario" placeholder="Salario"> <br>
+
+            <button id="btnAnalizar" onclick="analisisPersonalSalario()">Analizar</button>
+        </div>
+
        </div>
        <div id="contact">
         <div class="title2"><h1>Contacto <i class="fa-solid fa-envelope"></i></h1></div>
@@ -73,6 +86,7 @@
         </ul>
        </div>
     </div>
-    
+    <script src="./analisis.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
