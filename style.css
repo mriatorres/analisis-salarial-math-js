@@ -35,6 +35,13 @@ header{
 header .logo img{
     height: 50px;
 }
+
+header .logo span {
+    font-size: xx-large;
+    padding-left: 5%;
+}
+
+
 header ul{
     margin: 0;
     list-style: none;
@@ -45,6 +52,7 @@ header ul{
 }
 header ul li{
     padding: 0 30px;
+    font-size: larger;
 }
 .container{
     width: 1200px;
@@ -63,7 +71,7 @@ header ul li{
     padding-right: 50px;
 }
 .banner .content h1{
-    font-size: 4.5em;
+    font-size: larger;
     margin: 0;
 }
 .gradientText{
@@ -147,6 +155,7 @@ header input{
 .title{
     text-align: center;
     padding-top: 100px;
+    font-size: xxx-large;
 }
 .listSkill{
     display: grid;
