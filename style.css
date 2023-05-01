@@ -357,6 +357,8 @@ header input{
     font-size: large;
     border: none;
     border-radius: 2%;
+    padding: 5%;
+    background-color:rgb(255, 247, 236);
 }
 
 .formulario label{
@@ -474,6 +476,10 @@ header input{
 
     font-size: x-large;
 
+}
+
+#salarioNuevo{
+    color: #fc9b2c;
 }
 
 .listSkill{
