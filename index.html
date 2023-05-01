@@ -27,8 +27,8 @@
                 <i class="fa-solid fa-xmark"></i>
             </label>
             <li><a href="#home">Inicio</a></li>
-            <li><a href="#skill">uso</a></li>
-            <li><a href="#project">Analizar</a></li>
+            <li><a href="#uso">uso</a></li>
+            <li><a href="#analizar">Analizar</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </header>
@@ -55,28 +55,95 @@
             </div>
         </div>
 
-       <div id="skill">
+       <div id="uso">
         <h1 class="title">Como Usar <i class="fa-solid fa-circle-question"></i></h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit consectetur, repellat minima numquam qui cupiditate deserunt veniam exercitationem voluptates quod sed aut rem dignissimos! Architecto molestias quo enim eos accusantium?</p>
        </div>
-       <div id="project">
+       <div id="analizar">
             <h1 class="title">Analizar <i class="fa-solid fa-wave-square"></i></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias enim necessitatibus quos nisi ipsum explicabo facere vero repudiandae similique rem atque, inventore, nobis temporibus reiciendis expedita nesciunt nulla nostrum sed.</p>
-        
-        <div class="formulario">
-            <label for="año">Año</label><br>
-            <input type="text" id="año" placeholder="Año"><br>  
-            
-            <label for="trabajo">Trabajo / Empresa</label><br>
-            <input type="text" id="trabajo" placeholder="Trabajo"><br> 
+            <div class="formulario">
+                <label for="año">Año</label>
+                <input type="text" id="año" placeholder="Año"><br>  
+            </div>    
 
-            <label for="salario">Salario</label><br>
-            <input type="text" id="salario" placeholder="Salario"> <br>
+            <div class="formulario">
+                <label for="trabajo">Trabajo / Empresa</label>
+                <input type="text" id="trabajo" placeholder="Trabajo"><br>
+            </div>
 
-            <button id="btnAnalizar" onclick="analisisPersonalSalario()">Analizar</button>
+             <div class="formulario">
+                    <label for="salario">Salario</label>
+                    <input type="text" id="salario" placeholder="Salario"> 
+                    </div> <br> <br>
+                
+                 <div class="analiza">
+                     <button class="btnAnalizar" onclick="analisisPersonalSalario()"> Analizar</button>
+                 </div>
+             </div>
         </div>
 
-       </div>
+       <section id="procesos" class="inactive">
+        
+
+         <div class="containerResultado">
+                
+                        <div class="titulo">
+                            <p id="historialSalarios"></p>
+                        </div>
+                        <div class="canvas">
+                            <canvas id = "salariosCanvas">
+                            </canvas>
+                        </div> <br><br><br> 
+                        <div class="titulo">
+                            <div class="containerDiv">
+                                <p class="promedioTitulo"></p>
+                                <p class="promedioSalarios"></p>
+                            </div>
+                        </div><br><br>
+
+                        <div class="titulo">
+                         <div class="containerDiv">
+                             <p id="topSalarioS">
+
+                             </p>
+                             <p id="topsLista">
+
+                             </p>
+                             </div>
+                         </div>
+                      </div>
+                        <div class="titulo">
+                        <p id="porcentajeTitulo"></p>
+                    </div> <br>
+
+                    <!--<div class="titulo">
+                        <p id="crecimientoP">
+                            Porcentaje Crecimiento
+                        </p>
+                    </div>
+                    <div class="salariosCanvas">
+                        <canvas id="crecimientoP">
+
+                        </canvas>
+                    </div>-->
+
+                   
+                    <div class="titulo">
+                     <div class="containerDiv">
+                         <p>Mediana Porcentaje Crecimiento</p>
+                         <span id="mediapc"></span>
+                     </div>
+                    </div>
+                </div>
+                </div>         
+            </div>
+         </div>
+         <div id ="limpio" class="inactive">
+           <button onclick="limpiar()" class="btnAnalizar">Limpiar</button>
+          </div>
+
+    </section> 
        <div id="contact">
         <div class="title2"><h1>Contacto <i class="fa-solid fa-envelope"></i></h1></div>
         <ul class="contact">
@@ -85,8 +152,10 @@
             <li><i class="fa-brands fa-twitter"></i></li>
         </ul>
        </div>
-    </div>
+    </div>    
     <script src="./analisis.js"></script>
     <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
