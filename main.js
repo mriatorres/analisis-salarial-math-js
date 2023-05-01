@@ -49,8 +49,61 @@ function analisisPersonalSalario () {
         salarioDecimal.push(parseFloat(element).toFixed(6));
     });
 
+    //usuario no ingreso datos
+    
+    if (salarioString.length <= 1 | añoSalarios <= 1) {
+       swal('Complete los campos', 'Por favor, ingrese la informacion requerida\n para poder realizar el analisis.', {
+ buttons: {
+   cancel: "Cancelar",
+   analizar: {
+     text: "Volver a analizar",
+     value: "analizar",
+   },
+ },
+})
+.then((value) => {
+ switch (value) {
+
+  
+
+   case "analizar":
+     location.reload();
+     break;
+
+   default:
+     
+ }
+});
+
+   } else if (salarioString.length < 4 | añoSalarios < 4) {
+    swal('Complete los campos', 'Por favor, ingrese al menos 4 valores por campo\n para poder realizar el analisis.', {
+        buttons: {
+          cancel: "Cancelar",
+          analizar: {
+            text: "Volver a analizar",
+            value: "analizar",
+          },
+        },
+       })
+       .then((value) => {
+        switch (value) {
+       
+         
+       
+          case "analizar":
+            location.reload();
+            break;
+       
+          default:
+            
+        }
+       });
+
+   }
+
     console.log(añoSalarios);
     console.log(salarioDecimal);
+    let inputAño = document.getElementById("año").value;
     //promedio salarios
     const promedioSalarios = Analisis.calcularPromedio(añoSalarios);
     console.log(promedioSalarios);
@@ -67,7 +120,7 @@ function analisisPersonalSalario () {
     //proyeccion 
 
     //porcentajes crecimiento por años
-    const porcentajesCrecimiento = Analisis.porcentajesCrecimiento(trabajos, añoSalarios);
+    const porcentajesCrecimiento = Analisis.porcentajesCrecimiento(añosTrabajo, añoSalarios);
 
     console.log(porcentajesCrecimiento);
 
@@ -146,16 +199,13 @@ function analisisPersonalSalario () {
 
 
     //top salarios
-    const topSalarioString = topSalarios.toString(topSalarios);
+    const topSalarioString = topSalarios.toString();
     const topS = document.createElement('span');
     document.querySelector('#topSalarioS').appendChild(topS);
-    topS.innerText ='Top Salarios' + '\n';
-    const top1S = topSalarios[0].toString();
-    const top2S = topSalarios[1].toString();
-    const top3S = topSalarios[2].toString();
+    topS.innerText ='Top Mejores Salarios' + '\n';
     const tops = document.createElement('span');
     document.querySelector('#topsLista').appendChild(tops);
-    tops.innerText = '• '+top1S + '\n' + '• ' + top2S + '\n' + '• ' + top3S;
+    tops.innerText = topSalarioString;
 
 
 
@@ -165,7 +215,7 @@ function analisisPersonalSalario () {
 
     /*const porcent = document.querySelector('#crecimientoP');
 
-    const labelsP = añosTrabajo;
+    const labelsP = añoSalarios;
 
     const dataP = {
         labelsP,
@@ -189,7 +239,11 @@ function analisisPersonalSalario () {
 
     //media porcentaje crecimiento
     const medianaPS = medianaPorcentajesCrecimiento.toString();
-    document.getElementById('mediapc').innerText = medianaPS; 
+    document.getElementById('mediapc').innerText = medianaPS;
+    
+    //proyeccion nuevo salario
+    const nuevoSalarioS = nuevoSalario.toString();
+    document.getElementById('salarioNuevo').innerText = nuevoSalario;
 }
 
 function limpiar () {
