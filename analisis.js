@@ -29,7 +29,7 @@ Analisis.calcularMediana = function (listaDesordenada){
         return medianaListaPar;}
         else{
             const indexMitadListaImpar=Math.floor(lista.length/2);
-            const medianaListaImpar=lista[indexMitadListaImpar];
+            const medianaListaImpar=Number(lista[indexMitadListaImpar]).toFixed(2);
             return medianaListaImpar;}
 }
 
@@ -95,22 +95,22 @@ return medianaSalarios;
         const salarioPasado = salarios [i -1];
         const crecimiento = parseFloat(salarioActual - salarioPasado.toFixed(1));
         const porcentajeCrecimiento = parseFloat(crecimiento / salarioPasado.toFixed(1));
-        porcentajesCrecimiento.push(porcentajeCrecimiento).toFixed(1);
+        porcentajesCrecimiento.push(Number(porcentajeCrecimiento));
     }
     return porcentajesCrecimiento;
  }
 
  Analisis.nuevoSalario = function (salarios, medianaPorcentajesCrecimiento) {
     ultimoSalario = salarios.at(- 1);
-    const aumentoSalario = ultimoSalario * medianaPorcentajesCrecimiento;
-    const nuevoSalario = ultimoSalario + aumentoSalario;
+    const aumentoSalario = Number(ultimoSalario * medianaPorcentajesCrecimiento);
+    const nuevoSalario = (ultimoSalario + aumentoSalario);
     return nuevoSalario;
  }
 
  Analisis.topMejoreSalarios = function (salarios) {
     let topSalariosLista = salarios;
     topSalariosDescendente = topSalariosLista.sort(Analisis.descendente);
-    const topSalarios = topSalariosDescendente.slice(0,-3);
+    const topSalarios = topSalariosDescendente.slice(0,-1);
     return topSalarios;
  }
 
