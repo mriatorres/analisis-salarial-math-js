@@ -7,6 +7,7 @@
     <title>Ingresos || Analisis salarial</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
 </head>
 <body>
 
@@ -33,8 +34,8 @@
         </ul>
     </header>
 
-    <div class="container">
-        <div class="banner" id="home">
+    <div class="container" id="home">
+        <div class="banner">
             <div class="content">
                 <h1>
                     Ingresos 
@@ -44,8 +45,7 @@
                         </div>
                     </div>
                 </h1>
-                
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia magnam laboriosam corporis voluptas corrupti illo nesciunt esse quia aliquam fugit expedita perferendis odio at, ratione, doloremque est aperiam laborum iure.</p>
+                <p>Conozca su promedio salarial, porcentajes de crecimiento a traves del tiempo y una proyeccion de su salario a futuro.</p>
                 <div class="find">
                   
                 </div>
@@ -57,11 +57,15 @@
 
        <div id="uso">
         <h1 class="title">Como Usar <i class="fa-solid fa-circle-question"></i></h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit consectetur, repellat minima numquam qui cupiditate deserunt veniam exercitationem voluptates quod sed aut rem dignissimos! Architecto molestias quo enim eos accusantium?</p>
+        <p>En la siguiente calculadora ingrese los datos correspondientes para realizar el analisis salarial: <br>
+           <br><b>Año</b> <br>Asegurese de ingresar los años separados por coma y sin numeros decimales <br> ej: <i>2011,2012,2013,2014,...</i><br><br>
+           <b>Salario</b><br>Ingrese cada salario separado por una coma y sin puntos decimales <br>
+           ej: <i>970000,1000000,850000...</i>
+        </p>
        </div>
        <div id="analizar">
             <h1 class="title">Analizar <i class="fa-solid fa-wave-square"></i></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias enim necessitatibus quos nisi ipsum explicabo facere vero repudiandae similique rem atque, inventore, nobis temporibus reiciendis expedita nesciunt nulla nostrum sed.</p>
+            <p>A continuacion ingrese por lo menos 4 datos en cada campo para poder realizar el analisis.</p>
             <div class="formulario">
                 <label for="año">Año</label>
                 <input type="text" id="año" placeholder="Año"><br>  
@@ -112,12 +116,12 @@
                              </p>
                              </div>
                          </div>
-                      </div>
-                        <div class="titulo">
+                      </div><br><br>
+                        <!--<div class="titulo">
                         <p id="porcentajeTitulo"></p>
                     </div> <br>
 
-                    <!--<div class="titulo">
+                    <div class="titulo">
                         <p id="crecimientoP">
                             Porcentaje Crecimiento
                         </p>
@@ -134,6 +138,12 @@
                          <p>Mediana Porcentaje Crecimiento</p>
                          <span id="mediapc"></span>
                      </div>
+                    </div> <br><br>
+                    <div class="titulo">
+                        <div class="containerDiv">
+                            <p>Nuevo Salario Estimado</p>
+                            <span id="salarioNuevo"></span>
+                        </div>
                     </div>
                 </div>
                 </div>         
@@ -147,7 +157,7 @@
        <div id="contact">
         <div class="title2"><h1>Contacto <i class="fa-solid fa-envelope"></i></h1></div>
         <ul class="contact">
-            <li><i class="fa-brands fa-github"></i></li>
+            <a href="https://github.com/mriatorres" target="_blank" rel="noopener noreferrer"><li><i class="fa-brands fa-github"></i></li></a>
             <li><i class="fa-brands fa-instagram"></i></li>
             <li><i class="fa-brands fa-twitter"></i></li>
         </ul>
@@ -157,5 +167,6 @@
     <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
